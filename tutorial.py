@@ -1,5 +1,5 @@
 import curses
-from curses import wrapper
+from curses import KEY_BACKSPACE, color_pair, wrapper
 
 def start_screen(stdscr):
     stdscr.clear()
