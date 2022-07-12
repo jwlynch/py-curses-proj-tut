@@ -18,11 +18,11 @@ def wpm_test(stdscr):
     target_text = "hello world here is some text for this app"
     current_text = []
 
-    stdscr.clear()
-    display_text(stdscr, target_text, current_text)
-    stdscr.refresh()
-
     while True:
+        stdscr.clear()
+        display_text(stdscr, target_text, current_text)
+        stdscr.refresh()
+
         key_is_backspace_p = False
         key_is_esc_p = False
         key = stdscr.getkey()
