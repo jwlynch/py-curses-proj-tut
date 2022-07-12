@@ -22,6 +22,8 @@ def wpm_test(stdscr):
         key = stdscr.getkey()
 
         if len(key) == 1:
+            if ord(key) == 27:
+                key_is_esc_p = True
             # put more single-char key tests here
 
 def main(stdscr):
