@@ -39,7 +39,8 @@ def wpm_test(stdscr):
 
         # interpret (possibly special) key
         if key_is_backspace_p:
-            current_text.pop()
+            if len(current_text) > 0:
+                current_text.pop()
         elif key_is_esc_p:
             break
 
