@@ -12,7 +12,6 @@ def display_text(stdscr, target, current, wpm=0):
     stdscr.addstr(target)
 
     for i, char in enumerate(current):
-        stdscr.addstr(0, i, char, color_pair(1))
         if i < len(target):
             correct_char = target[i]
 
@@ -23,6 +22,7 @@ def display_text(stdscr, target, current, wpm=0):
         else:
             color = color_pair(2)
 
+        stdscr.addstr(0, i, char, color)
 
 def wpm_test(stdscr):
     target_text = "hello world here is some text for this app"
