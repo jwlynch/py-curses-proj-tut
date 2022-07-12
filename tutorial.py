@@ -1,5 +1,6 @@
 import curses
 from curses import KEY_BACKSPACE, color_pair, wrapper
+import time
 
 def start_screen(stdscr):
     stdscr.clear()
@@ -30,10 +31,13 @@ def display_text(stdscr, target, current, wpm=0):
 def wpm_test(stdscr):
     target_text = "hello world here is some text for this app"
     current_text = []
+    start_time = time.time()
 
     while True:
+        time_elapsed = max(time.time() - start_time, 1) # avoid div by 0
+        wpm = round((len(current_text) / (time_elapsed / 60)) / 5)
         stdscr.clear()
-        display_text(stdscr, target_text, current_text)
+        display_text(stdscr, target_text, current_text, wpm)
         stdscr.refresh()
 
         key_is_backspace_p = False
