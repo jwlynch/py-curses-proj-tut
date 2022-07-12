@@ -11,6 +11,9 @@ def start_screen(stdscr):
 def display_text(stdscr, target, current, wpm=0):
     stdscr.addstr(target)
 
+    if wpm > 0:
+        stdscr.addstr(1, 0, f"{wpm} Words per Minute")
+
     for i, char in enumerate(current):
         if i < len(target):
             correct_char = target[i]
