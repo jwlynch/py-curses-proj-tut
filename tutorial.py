@@ -21,6 +21,8 @@ def display_text(stdscr, target, current, wpm=0):
             else:
                 color = color_pair(2)
         else:
+            color = color_pair(2)
+
 
 def wpm_test(stdscr):
     target_text = "hello world here is some text for this app"
