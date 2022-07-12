@@ -48,17 +48,6 @@ def wpm_test(stdscr):
             # so just append it to the current_text list
             current_text.append(key)
 
-        stdscr.clear()
-        stdscr.addstr(target_text)
-
-        # position cursor to start of second line (for what user types)
-        stdscr.addstr(1, 0, "")
-
-        for char in current_text:
-            stdscr.addstr(char, color_pair(1))
-
-        stdscr.refresh()
-
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
