@@ -58,6 +58,10 @@ def wpm_test(stdscr):
             # key isn't special, or a "command"
             # so just append it to the current_text list
 
+            # the only way user should be able to get keys into the
+            # current list, is if its length is under the length of
+            # the target text.
+
             if len(current_text) < len(target_text):
                 current_text.append(key)
 
