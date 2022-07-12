@@ -57,7 +57,9 @@ def wpm_test(stdscr):
         else: 
             # key isn't special, or a "command"
             # so just append it to the current_text list
-            current_text.append(key)
+
+            if len(current_text) < len(target_text):
+                current_text.append(key)
 
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
