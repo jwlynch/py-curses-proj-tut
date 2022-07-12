@@ -54,7 +54,8 @@ def wpm_test(stdscr):
         elif key_is_esc_p:
             break
 
-        else: # key isn't special, or a "command"
+        else: 
+            # key isn't special, or a "command"
             # so just append it to the current_text list
             current_text.append(key)
 
