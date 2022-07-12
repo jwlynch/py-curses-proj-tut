@@ -28,6 +28,8 @@ def wpm_test(stdscr):
                 key_is_backspace_p = True
             # put more single-char key tests here
         else: # length of key is not 1
+            if key in ("KEY_BACKSPACE"):
+                key_is_backspace_p = True
 
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
