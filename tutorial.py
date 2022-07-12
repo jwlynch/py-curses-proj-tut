@@ -14,6 +14,12 @@ def display_text(stdscr, target, current, wpm=0):
     for i, char in enumerate(current):
         stdscr.addstr(0, i, char, color_pair(1))
         if i < len(target):
+            correct_char = target[i]
+
+            if current[i] == correct_char:
+                color = color_pair(1)
+            else:
+                color = color_pair(2)
         else:
 
 def wpm_test(stdscr):
