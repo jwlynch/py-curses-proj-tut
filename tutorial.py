@@ -24,6 +24,8 @@ def wpm_test(stdscr):
         if len(key) == 1:
             if ord(key) == 27:
                 key_is_esc_p = True
+            elif key in ('\b', "\x7f"):
+                key_is_backspace_p = True
             # put more single-char key tests here
 
 def main(stdscr):
