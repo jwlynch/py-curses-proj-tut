@@ -58,6 +58,7 @@ def main(stdscr):
     curses.init_pair(3, curses.COLOR_WHITE, curses.COLOR_BLACK)
 
     start_screen(stdscr)
+    wpm_test(stdscr)
 
 wrapper(main)
 
