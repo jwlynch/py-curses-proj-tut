@@ -21,6 +21,9 @@ def wpm_test(stdscr):
         key_is_esc_p = False
         key = stdscr.getkey()
 
+        if len(key) == 1:
+            # put more single-char key tests here
+
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
