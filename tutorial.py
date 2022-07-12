@@ -8,6 +8,9 @@ def start_screen(stdscr):
     stdscr.refresh()
     stdscr.getkey()
 
+def display_text(stdscr, target, current, wpm=0):
+    pass
+
 def wpm_test(stdscr):
     target_text = "hello world here is some text for this app"
     current_text = []
