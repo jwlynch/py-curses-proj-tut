@@ -27,6 +27,7 @@ def wpm_test(stdscr):
             elif key in ('\b', "\x7f"):
                 key_is_backspace_p = True
             # put more single-char key tests here
+        else: # length of key is not 1
 
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
