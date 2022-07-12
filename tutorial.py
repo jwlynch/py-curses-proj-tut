@@ -19,7 +19,7 @@ def wpm_test(stdscr):
     current_text = []
 
     stdscr.clear()
-    stdscr.addstr(target_text)
+    display_text(stdscr, target_text, current_text)
     stdscr.refresh()
 
     while True:
